@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox alignment="CENTER" prefHeight="598.0" prefWidth="676.0" spacing="10.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ajbobo.testingui.TestingUIController">
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <children>
+      <TitledPane collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" text="Producer" HBox.hgrow="ALWAYS">
+         <content>
+            <AnchorPane>
+               <children>
+                  <Button fx:id="btnProducerStart" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#startProducer" text="Start" AnchorPane.leftAnchor="5.0" />
+                  <Button fx:id="btnProducerStop" disable="true" layoutX="84.0" layoutY="14.0" mnemonicParsing="false" onAction="#stopProducer" text="Stop" AnchorPane.rightAnchor="5.0" />
+                  <TextArea fx:id="txtProducerOutput" editable="false" focusTraversable="false" layoutX="43.6" layoutY="47.6" minWidth="120.0" prefHeight="348.0" prefWidth="139.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" text="Stream Processing" HBox.hgrow="ALWAYS">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TextArea fx:id="txtStreamOutput" editable="false" focusTraversable="false" layoutX="21.0" layoutY="16.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="120.0" prefHeight="348.0" prefWidth="139.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+               </children></AnchorPane>
+         </content>
+      </TitledPane>
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" spacing="5.0" HBox.hgrow="ALWAYS">
+         <children>
+            <TitledPane collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Consumer - Person" VBox.vgrow="ALWAYS">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnPersonStart" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#startPersonConsumer" text="Start" AnchorPane.leftAnchor="5.0" />
+                        <Button fx:id="btnPersonStop" disable="true" layoutX="145.0" layoutY="13.0" mnemonicParsing="false" onAction="#stopPersonConsumer" text="Stop" AnchorPane.rightAnchor="5.0" />
+                        <TextArea fx:id="txtPersonOutput" editable="false" focusTraversable="false" minWidth="120.0" prefHeight="348.0" prefWidth="139.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Consumer - Transaction" VBox.vgrow="ALWAYS">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnTransactionStart" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#startTransactionConsumer" text="Start" AnchorPane.leftAnchor="5.0" />
+                        <Button fx:id="btnTransactionStop" disable="true" layoutX="145.0" layoutY="13.0" mnemonicParsing="false" onAction="#stopTransactionConsumer" text="Stop" AnchorPane.rightAnchor="5.0" />
+                        <TextArea fx:id="txtTransactionOutput" editable="false" focusTraversable="false" minWidth="120.0" prefHeight="348.0" prefWidth="139.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+         </children>
+      </VBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</HBox>

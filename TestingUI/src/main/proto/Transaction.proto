@@ -1,0 +1,13 @@
+syntax = "proto3";
+package com.ajbobo.testingui;
+option java_outer_classname = "TransactionOuter";
+
+import "Decimal.proto";
+
+message Transaction {
+  int32 id = 1;
+  string from = 2;
+  string to = 3;
+  Decimal amount = 4;
+  string description = 5;
+}

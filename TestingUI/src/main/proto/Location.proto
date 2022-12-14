@@ -1,0 +1,8 @@
+syntax = "proto3";
+package com.ajbobo.testingui;
+option java_outer_classname = "LocationOuter";
+
+message Location {
+  string City = 1;
+  string State = 2;
+}

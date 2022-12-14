@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ConsumerExample" type="Application" factoryName="Application" nameIsGenerated="true">
+    <option name="MAIN_CLASS_NAME" value="examples.ConsumerExample" />
+    <module name="Example1" />
+    <option name="PROGRAM_PARAMETERS" value="getting-started.properties" />
+    <option name="WORKING_DIRECTORY" value="$ContentRoot$" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

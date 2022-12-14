@@ -1,0 +1,8 @@
+syntax = "proto3";
+package com.ajbobo.testingui;
+option java_outer_classname = "DecimalOuter";
+
+message Decimal {
+  int32 dollars = 1;
+  int32 cents = 2;
+}

@@ -1,0 +1,5 @@
+/TestingUI/logs/
+/.idea/*
+!/.idea/runConfigurations
+*/target
+**.iml
