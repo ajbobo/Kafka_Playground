@@ -4,7 +4,11 @@
 This has a couple of Java projects that I used to learn how to run and interact with Kafka. They're really simple examples,
 but I think they should get you started.
 
-> Note about versions: I built and tested these using the [Azul Zulu](https://www.azul.com/downloads/?package=jdk) build of OpenJDK 11.  
+> Note about versions: I built and tested these using the [Azul Zulu](https://www.azul.com/downloads/?package=jdk) build of OpenJDK 11.
+
+## Prerequisites ##
+In order to use this, you need to have the Protocol Buffers Compiler (protoc) installed on your computer, in a directory referenced by your PATH.
+You can download protoc from https://github.com/protocolbuffers/protobuf/releases. Be sure to get the version that matches your operating system. 
 
 ## Installation ##
 In the docker directory, there is a docker-compose.yaml file that can be used to create a basic Kafka setup
