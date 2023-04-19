@@ -1,0 +1,4 @@
+FROM provectuslabs/kafka-ui:latest
+
+# This is required for the AWS_MSK_IAM authentication mechanism
+COPY ./aws-msk-iam-auth-1.1.6-all.jar /lib/aws-msk-iam-auth-1.1.6-all.jar

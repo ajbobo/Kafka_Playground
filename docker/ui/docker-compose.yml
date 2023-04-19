@@ -1,0 +1,22 @@
+---
+version: '3'
+services:
+
+# This creates a container that has a UI connection to an AWS Kafka cluster
+  kafka-ui:
+    container_name: kafka-ui
+    build:
+      dockerfile: dockerfile
+    ports:
+      - 8080:8080
+    environment:
+      KAFKA_CLUSTERS_0_NAME: Shared_MSK_Dev
+      # Put the public IAM-enabled endpoints here
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: <Servers>
+      KAFKA_CLUSTERS_0_PROPERTIES_SECURITY_PROTOCOL: SASL_SSL
+      KAFKA_CLUSTERS_0_PROPERTIES_SASL_MECHANISM: AWS_MSK_IAM
+      KAFKA_CLUSTERS_0_PROPERTIES_SASL_JAAS_CONFIG: 'software.amazon.msk.auth.iam.IAMLoginModule required;'
+      KAFKA_CLUSTERS_0_PROPERTIES_SASL_CLIENT_CALLBACK_HANDLER_CLASS: 'software.amazon.msk.auth.iam.IAMClientCallbackHandler'
+      AWS_ACCESS_KEY: ${AWS_ACCESS_KEY}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AWS_SESSION_TOKEN: ${AWS_SESSION_TOKEN}
