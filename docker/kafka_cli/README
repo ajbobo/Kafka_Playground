@@ -1,0 +1,13 @@
+Get AWS credentials:
+NOTE: the . is required at the beginning or else the environment variable settings are lost when the script completes
+> . ./set_aws_environment.sh ic-dev
+
+Get Kafka cluster ARNs:
+> aws kafka list-clusters | jq -r '.ClusterInfoList[] | .ClusterArn'
+
+Get bootstrap servers:
+> aws kafka get-bootstrap-brokers --cluster-arn arn:aws:kafka:us-west-2:300813158921:cluster/shared-msk01-us-west-2/7749a7fa-a59f-4433-ae55-36a0b03cadc0-8 | jq -r '.BootstrapBrokerStringPublicSaslIam'
+
+To get Kafka topics from a cluster
+> kafka-topics.sh --list --command-config kafka.properties --bootstrap-server b-2-public.sharedmsk01uswest2.ejk363.c8.kafka.us-west-2.amazonaws.com:9198,b-3-public.sharedmsk01uswest2.ejk363.c8.kafka.us-west-2.amazonaws.com:9198,b-1-public.sharedmsk01uswest2.ejk363.c8.kafka.us-west-2.amazonaws.com:9198
+

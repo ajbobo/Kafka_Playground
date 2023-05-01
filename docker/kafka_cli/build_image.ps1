@@ -1,0 +1,1 @@
+docker build -t kafka-cli:1.0 .
