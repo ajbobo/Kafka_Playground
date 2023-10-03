@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package KTableTest;
+
+message EnabledObject {
+  string name = 1;
+  bool enabled = 2;
+}
